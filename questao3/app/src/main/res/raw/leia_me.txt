@@ -1,0 +1,8 @@
+IMPORTANTE:
+==========
+
+Coloque um arquivo de áudio .mp3 nesta pasta com o nome "musica.mp3".
+
+Caminho completo: app/src/main/res/raw/musica.mp3
+
+O MusicService.java referencia esse arquivo como R.raw.musica.

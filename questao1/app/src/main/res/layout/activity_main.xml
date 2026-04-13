@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitor de Sistema"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="48dp" />
+
+    <!-- Status do Bluetooth -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvBluetoothStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aguardando mudança..."
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:background="#E3F2FD"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Status do Modo Avião -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo Avião"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvAirplaneStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aguardando mudança..."
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:background="#FFF3E0"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log de eventos:"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="#F5F5F5" />
+
+</LinearLayout>
