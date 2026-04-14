@@ -5,6 +5,8 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Intent;
+import android.content.pm.ServiceInfo;
+import android.os.Build;
 import android.os.IBinder;
 import androidx.core.app.NotificationCompat;
 
@@ -32,7 +34,11 @@ public class MeuForegroundService extends Service {
                 .build();
 
         // Inicia o serviço em foreground com a notificação
-        startForeground(NOTIFICATION_ID, notification);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC);
+        } else {
+            startForeground(NOTIFICATION_ID, notification);
+        }
 
         return START_STICKY;
     }
@@ -40,7 +46,7 @@ public class MeuForegroundService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        stopForeground(true);
+        stopForeground(STOP_FOREGROUND_REMOVE);
     }
 
     @Override
